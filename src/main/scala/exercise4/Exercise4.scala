@@ -19,10 +19,13 @@ class Exercise4 extends Module {
     val dataIn = Flipped(Decoupled(UInt(8.W)))
     val dataOut = Decoupled(UInt(16.W))
   })
-  //val mult = Module(new Multiplier(8))
+  //instantiating the Multiplier module
+  val mult = Module(new Multiplier(8))
 
-  // put your code to compute the square here
+  //Defaults. Add more defaults as needed
   io.dataIn.ready := 0.B
   io.dataOut.valid := 0.B
   io.dataOut.bits := 0.U
+
+  // Put your code below to compute the square
 }
